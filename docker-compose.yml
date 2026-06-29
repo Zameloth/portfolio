@@ -7,6 +7,11 @@ services:
     restart: unless-stopped
     networks:
       - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portfolio.rule=Host(`theo-eloy.fr`)"
+      - "traefik.http.routers.portfolio.tls=true"
+      - "traefik.http.routers.portfolio.tls.certresolver=letsencrypt"
 
 networks:
   web:
