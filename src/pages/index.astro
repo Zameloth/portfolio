@@ -1,22 +1,15 @@
 ---
-import '../styles/global.css';
+import Layout from '../components/Layout.astro';
+import Hero from '../components/Hero.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Théo ELOY — MLOps / AI Engineer</title>
-		<meta name="description" content="Portfolio of Théo ELOY, an MLOps and AI Engineer." />
-	</head>
-	<body class="bg-slate-950 text-slate-100">
-		<main class="min-h-screen flex items-center justify-center">
-			<div class="text-center">
-				<h1 class="text-4xl font-mono font-bold mb-4">Théo ELOY</h1>
-				<p class="text-lg font-mono text-slate-400 mb-8">MLOps / AI Engineer</p>
-				<p class="font-mono text-slate-500">Portfolio coming soon</p>
-			</div>
-		</main>
-	</body>
-</html>
+<Layout
+	title="Théo ELOY — MLOps / AI Engineer"
+	description="Portfolio of Théo ELOY, an MLOps and AI Engineer."
+>
+	<Hero
+		name="Théo ELOY"
+		headline="MLOps / AI Engineer"
+		description="Building AI systems and ML infrastructure. Passionate about scalable ML pipelines, model serving, and production-grade AI applications."
+	/>
+</Layout>

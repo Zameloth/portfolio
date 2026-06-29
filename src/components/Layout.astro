@@ -1,0 +1,39 @@
+---
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description } = Astro.props;
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		{description && <meta name="description" content={description} />}
+	</head>
+	<body class="bg-slate-950 text-slate-100">
+		<header class="border-b border-slate-800">
+			<nav class="max-w-4xl mx-auto px-6 py-6">
+				<a href="/" class="text-xl font-mono font-bold hover:text-slate-300 transition">
+					Théo ELOY
+				</a>
+			</nav>
+		</header>
+
+		<main class="min-h-[calc(100vh-180px)]">
+			<slot />
+		</main>
+
+		<footer class="border-t border-slate-800 mt-16">
+			<div class="max-w-4xl mx-auto px-6 py-8 text-center text-slate-400 text-sm font-mono">
+				<p>&copy; {new Date().getFullYear()} Théo ELOY. All rights reserved.</p>
+			</div>
+		</footer>
+	</body>
+</html>
