@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	color-scheme: dark;
+}
+
+html {
+	background-color: #0f172a;
+	color: #f1f5f9;
+}
+
+body {
+	font-family: theme('fontFamily.mono');
+}

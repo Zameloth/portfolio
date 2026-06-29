@@ -1,9 +1,7 @@
 services:
   portfolio:
-    image: nginx:alpine
+    image: ghcr.io/zameloth/portfolio:latest
     container_name: portfolio
-    volumes:
-      - ./site:/usr/share/nginx/html:ro
     restart: unless-stopped
     networks:
       - web
