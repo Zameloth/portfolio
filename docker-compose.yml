@@ -1,0 +1,13 @@
+services:
+  portfolio:
+    image: nginx:alpine
+    container_name: portfolio
+    volumes:
+      - ./site:/usr/share/nginx/html:ro
+    restart: unless-stopped
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
