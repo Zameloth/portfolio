@@ -21,30 +21,38 @@ const projects = (await getCollection('projects')).sort(
 	/>
 
 	<section id="projects" class="max-w-4xl mx-auto px-6 py-20">
-		<h2 class="text-2xl font-bold font-mono mb-10">Projects</h2>
+		<h2 data-reveal class="text-2xl font-bold font-mono mb-10 uppercase tracking-widest">
+			<span class="text-amber-400">// </span>Projects
+		</h2>
 		<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-			{projects.map((project) => (
-				<ProjectCard
-					slug={project.slug}
-					title={project.data.title}
-					description={project.data.description}
-					stack={project.data.stack}
-					repo={project.data.repo}
-					demo={project.data.demo}
-				/>
+			{projects.map((project, i) => (
+				<div data-reveal style={`transition-delay: ${i * 80}ms`}>
+					<ProjectCard
+						slug={project.slug}
+						title={project.data.title}
+						description={project.data.description}
+						stack={project.data.stack}
+						repo={project.data.repo}
+						demo={project.data.demo}
+					/>
+				</div>
 			))}
 		</div>
 	</section>
 
-	<section id="skills" class="max-w-4xl mx-auto px-6 py-20 border-t border-zinc-800">
-		<h2 class="text-2xl font-bold font-mono mb-10">Skills</h2>
+	<section id="skills" class="max-w-4xl mx-auto px-6 py-20 border-t border-slate-800">
+		<h2 data-reveal class="text-2xl font-bold font-mono mb-10 uppercase tracking-widest">
+			<span class="text-amber-400">// </span>Skills
+		</h2>
 		<div class="grid gap-8 sm:grid-cols-2">
-			{skillCategories.map((category) => (
-				<div>
-					<h3 class="text-sm font-mono text-emerald-400 uppercase tracking-widest mb-3">{category.name}</h3>
+			{skillCategories.map((category, i) => (
+				<div data-reveal style={`transition-delay: ${i * 80}ms`}>
+					<h3 class="text-sm font-mono text-amber-400 uppercase tracking-widest mb-3">{category.name}</h3>
 					<div class="flex flex-wrap gap-2">
 						{category.skills.map((skill) => (
-							<span class="px-2 py-1 text-sm font-mono bg-zinc-800 text-zinc-300 rounded">{skill}</span>
+							<span class="px-2 py-1 text-sm font-mono bg-slate-800/60 text-slate-300 rounded border border-slate-700 hover:border-amber-500/50 hover:text-amber-300 transition-colors cursor-default">
+								{skill}
+							</span>
 						))}
 					</div>
 				</div>
@@ -52,13 +60,15 @@ const projects = (await getCollection('projects')).sort(
 		</div>
 	</section>
 
-	<section id="contact" class="max-w-4xl mx-auto px-6 py-20 border-t border-zinc-800">
-		<h2 class="text-2xl font-bold font-mono mb-6">Contact</h2>
-		<p class="text-zinc-400 mb-8">Interested in working together or have a question? Reach out directly.</p>
-		<div class="flex flex-col sm:flex-row gap-4">
+	<section id="contact" class="max-w-4xl mx-auto px-6 py-20 border-t border-slate-800">
+		<h2 data-reveal class="text-2xl font-bold font-mono mb-6 uppercase tracking-widest">
+			<span class="text-amber-400">// </span>Contact
+		</h2>
+		<p data-reveal class="text-slate-400 mb-8">Interested in working together or have a question? Reach out directly.</p>
+		<div data-reveal class="flex flex-col sm:flex-row gap-4">
 			<a
 				href="mailto:theoeloy12@gmail.com"
-				class="inline-flex items-center gap-2 px-4 py-2 font-mono text-sm border border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-zinc-900 transition-colors rounded"
+				class="inline-flex items-center gap-2 px-4 py-2 font-mono text-sm border border-amber-500 text-amber-400 hover:border-amber-400 hover:text-amber-300 transition-colors rounded"
 			>
 				theoeloy12@gmail.com
 			</a>
@@ -66,7 +76,7 @@ const projects = (await getCollection('projects')).sort(
 				href="https://github.com/TheoEloy"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="inline-flex items-center gap-2 px-4 py-2 font-mono text-sm border border-zinc-600 text-zinc-300 hover:border-zinc-400 hover:text-white transition-colors rounded"
+				class="inline-flex items-center gap-2 px-4 py-2 font-mono text-sm border border-slate-600 text-slate-300 hover:border-slate-400 hover:text-white transition-colors rounded"
 			>
 				GitHub
 			</a>
@@ -74,10 +84,28 @@ const projects = (await getCollection('projects')).sort(
 				href="https://linkedin.com/in/theo-eloy"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="inline-flex items-center gap-2 px-4 py-2 font-mono text-sm border border-zinc-600 text-zinc-300 hover:border-zinc-400 hover:text-white transition-colors rounded"
+				class="inline-flex items-center gap-2 px-4 py-2 font-mono text-sm border border-slate-600 text-slate-300 hover:border-slate-400 hover:text-white transition-colors rounded"
 			>
 				LinkedIn
 			</a>
 		</div>
 	</section>
 </Layout>
+
+<script>
+	document.documentElement.classList.add('js-reveal');
+
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('revealed');
+					observer.unobserve(entry.target);
+				}
+			});
+		},
+		{ threshold: 0.12 }
+	);
+
+	document.querySelectorAll('[data-reveal]').forEach((el) => observer.observe(el));
+</script>

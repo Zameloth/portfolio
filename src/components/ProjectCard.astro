@@ -11,10 +11,10 @@ interface Props {
 const { slug, title, description, stack, repo, demo } = Astro.props;
 ---
 
-<article class="border border-slate-800 rounded-lg p-6 flex flex-col gap-4 hover:border-slate-600 transition bg-slate-900/40">
+<article class="border border-slate-700/60 rounded-lg p-6 flex flex-col gap-4 hover:border-amber-500/30 transition-colors duration-300 bg-slate-900/40 h-full">
 	<div class="flex flex-col gap-2">
 		<h3 class="text-lg font-semibold font-mono">
-			<a href={`/projects/${slug}`} class="hover:text-slate-300 transition">
+			<a href={`/projects/${slug}`} class="hover:text-amber-400 transition-colors">
 				{title}
 			</a>
 		</h3>
@@ -23,23 +23,23 @@ const { slug, title, description, stack, repo, demo } = Astro.props;
 
 	<div class="flex flex-wrap gap-2 mt-auto">
 		{stack.map((tag) => (
-			<span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
+			<span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-800/80 text-slate-400 border border-slate-700 hover:border-slate-500 hover:text-slate-200 transition-colors cursor-default">
 				{tag}
 			</span>
 		))}
 	</div>
 
 	<div class="flex items-center gap-4 text-sm font-mono">
-		<a href={`/projects/${slug}`} class="text-slate-300 hover:text-white transition">
+		<a href={`/projects/${slug}`} class="text-amber-400 hover:text-amber-300 transition-colors">
 			Read more →
 		</a>
 		{repo && (
-			<a href={repo} target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-300 transition">
+			<a href={repo} target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-300 transition-colors">
 				GitHub
 			</a>
 		)}
 		{demo && (
-			<a href={demo} target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-300 transition">
+			<a href={demo} target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-300 transition-colors">
 				Demo
 			</a>
 		)}

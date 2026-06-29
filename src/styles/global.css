@@ -13,4 +13,27 @@ html {
 
 body {
 	font-family: theme('fontFamily.mono');
+	/* Blueprint grid — subtle, site-wide */
+	background-image:
+		linear-gradient(rgba(148, 163, 184, 0.04) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
+	background-size: 32px 32px;
+}
+
+/* Scroll-reveal — only applied when JS runs (js-reveal class on <html>) */
+.js-reveal [data-reveal] {
+	opacity: 0;
+	transform: translateY(18px);
+	transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.js-reveal [data-reveal].revealed {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.js-reveal [data-reveal] {
+		transition: none;
+	}
 }
