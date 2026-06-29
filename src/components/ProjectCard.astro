@@ -1,0 +1,47 @@
+---
+interface Props {
+	slug: string;
+	title: string;
+	description: string;
+	stack: string[];
+	repo?: string;
+	demo?: string;
+}
+
+const { slug, title, description, stack, repo, demo } = Astro.props;
+---
+
+<article class="border border-slate-800 rounded-lg p-6 flex flex-col gap-4 hover:border-slate-600 transition bg-slate-900/40">
+	<div class="flex flex-col gap-2">
+		<h3 class="text-lg font-semibold font-mono">
+			<a href={`/projects/${slug}`} class="hover:text-slate-300 transition">
+				{title}
+			</a>
+		</h3>
+		<p class="text-slate-400 text-sm leading-relaxed">{description}</p>
+	</div>
+
+	<div class="flex flex-wrap gap-2 mt-auto">
+		{stack.map((tag) => (
+			<span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
+				{tag}
+			</span>
+		))}
+	</div>
+
+	<div class="flex items-center gap-4 text-sm font-mono">
+		<a href={`/projects/${slug}`} class="text-slate-300 hover:text-white transition">
+			Read more →
+		</a>
+		{repo && (
+			<a href={repo} target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-300 transition">
+				GitHub
+			</a>
+		)}
+		{demo && (
+			<a href={demo} target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-300 transition">
+				Demo
+			</a>
+		)}
+	</div>
+</article>

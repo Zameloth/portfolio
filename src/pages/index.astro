@@ -1,6 +1,12 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from '../components/Layout.astro';
 import Hero from '../components/Hero.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = (await getCollection('projects')).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
 ---
 
 <Layout
@@ -12,4 +18,20 @@ import Hero from '../components/Hero.astro';
 		headline="MLOps / AI Engineer"
 		description="Building AI systems and ML infrastructure. Passionate about scalable ML pipelines, model serving, and production-grade AI applications."
 	/>
+
+	<section id="projects" class="max-w-4xl mx-auto px-6 py-20">
+		<h2 class="text-2xl font-bold font-mono mb-10">Projects</h2>
+		<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+			{projects.map((project) => (
+				<ProjectCard
+					slug={project.slug}
+					title={project.data.title}
+					description={project.data.description}
+					stack={project.data.stack}
+					repo={project.data.repo}
+					demo={project.data.demo}
+				/>
+			))}
+		</div>
+	</section>
 </Layout>
