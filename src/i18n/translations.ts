@@ -5,6 +5,7 @@ type Translations = {
 	siteDescription: string;
 	heroHeadline: string;
 	heroDescription: string;
+	heroAvailability: string;
 	sectionProjects: string;
 	sectionSkills: string;
 	sectionContact: string;
@@ -19,11 +20,12 @@ type Translations = {
 
 export const translations: Record<Locale, Translations> = {
 	fr: {
-		siteTitle: 'Théo ELOY — Ingénieur MLOps / IA',
-		siteDescription: 'Portfolio de Théo ELOY, ingénieur MLOps et IA.',
-		heroHeadline: 'Ingénieur MLOps / IA',
+		siteTitle: 'Théo ELOY — Ingénieur IA',
+		siteDescription: 'Portfolio de Théo ELOY, ingénieur IA.',
+		heroHeadline: 'Ingénieur IA',
 		heroDescription:
-			"Construction de systèmes IA et d'infrastructure ML. Passionné par les pipelines ML scalables, le déploiement de modèles et les applications IA en production.",
+			"Je conçois et déploie des solutions d'IA de bout en bout, de l'infrastructure cloud jusqu'aux agents LLM en production.",
+		heroAvailability: '● Disponible · septembre 2026',
 		sectionProjects: 'Projets',
 		sectionSkills: 'Compétences',
 		sectionContact: 'Contact',
@@ -41,11 +43,12 @@ export const translations: Record<Locale, Translations> = {
 		},
 	},
 	en: {
-		siteTitle: 'Théo ELOY — MLOps / AI Engineer',
-		siteDescription: 'Portfolio of Théo ELOY, an MLOps and AI Engineer.',
-		heroHeadline: 'MLOps / AI Engineer',
+		siteTitle: 'Théo ELOY — AI Engineer',
+		siteDescription: 'Portfolio of Théo ELOY, AI Engineer.',
+		heroHeadline: 'AI Engineer',
 		heroDescription:
-			'Building AI systems and ML infrastructure. Passionate about scalable ML pipelines, model serving, and production-grade AI applications.',
+			'I design and deploy end-to-end AI solutions, from cloud infrastructure to LLM agents in production.',
+		heroAvailability: '● Available · September 2026',
 		sectionProjects: 'Projects',
 		sectionSkills: 'Skills',
 		sectionContact: 'Contact',
