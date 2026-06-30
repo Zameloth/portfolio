@@ -13,10 +13,14 @@ interface Props {
 const { title, description, locale, canonicalPath } = Astro.props;
 const t = translations[locale];
 
+const siteUrl = 'https://theo-eloy.fr';
 const frHref = canonicalPath;
 const enHref = '/en' + canonicalPath;
 const altHref = locale === 'fr' ? enHref : frHref;
 const homeHref = locale === 'fr' ? '/' : '/en/';
+const pageUrl = siteUrl + (locale === 'fr' ? canonicalPath : '/en' + canonicalPath);
+const ogLocale = locale === 'fr' ? 'fr_FR' : 'en_US';
+const ogLocaleAlt = locale === 'fr' ? 'en_US' : 'fr_FR';
 ---
 
 <!doctype html>
@@ -27,9 +31,25 @@ const homeHref = locale === 'fr' ? '/' : '/en/';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		{description && <meta name="description" content={description} />}
-		<link rel="alternate" hreflang="fr" href={frHref} />
-		<link rel="alternate" hreflang="en" href={enHref} />
-		<link rel="alternate" hreflang="x-default" href={frHref} />
+		<link rel="canonical" href={pageUrl} />
+		<link rel="alternate" hreflang="fr" href={`${siteUrl}${frHref}`} />
+		<link rel="alternate" hreflang="en" href={`${siteUrl}${enHref}`} />
+		<link rel="alternate" hreflang="x-default" href={`${siteUrl}${frHref}`} />
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={pageUrl} />
+		<meta property="og:title" content={title} />
+		{description && <meta property="og:description" content={description} />}
+		<meta property="og:image" content={`${siteUrl}/og-image.png`} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:locale" content={ogLocale} />
+		<meta property="og:locale:alternate" content={ogLocaleAlt} />
+		<!-- Twitter / X card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		{description && <meta name="twitter:description" content={description} />}
+		<meta name="twitter:image" content={`${siteUrl}/og-image.png`} />
 	</head>
 	<body class="bg-slate-950 text-slate-100">
 		<header class="border-b border-slate-800">
@@ -37,13 +57,20 @@ const homeHref = locale === 'fr' ? '/' : '/en/';
 				<a href={homeHref} class="text-xl font-mono font-bold hover:text-slate-300 transition">
 					Théo ELOY
 				</a>
-				<a
-					href={altHref}
-					aria-label={t.switchLangLabel}
-					class="text-sm font-mono text-slate-400 hover:text-amber-400 transition border border-slate-700 hover:border-amber-500/50 px-3 py-1 rounded"
-				>
-					{t.switchLang}
-				</a>
+				<div class="flex items-center gap-6">
+					<ul class="hidden sm:flex items-center gap-6">
+						<li><a href={`${homeHref}#projects`} class="text-sm font-mono text-slate-400 hover:text-amber-400 transition">{t.sectionProjects}</a></li>
+						<li><a href={`${homeHref}#skills`} class="text-sm font-mono text-slate-400 hover:text-amber-400 transition">{t.sectionSkills}</a></li>
+						<li><a href={`${homeHref}#contact`} class="text-sm font-mono text-slate-400 hover:text-amber-400 transition">{t.sectionContact}</a></li>
+					</ul>
+					<a
+						href={altHref}
+						aria-label={t.switchLangLabel}
+						class="text-sm font-mono text-slate-400 hover:text-amber-400 transition border border-slate-700 hover:border-amber-500/50 px-3 py-1 rounded"
+					>
+						{t.switchLang}
+					</a>
+				</div>
 			</nav>
 		</header>
 
