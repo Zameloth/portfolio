@@ -6,7 +6,7 @@ repo: "https://github.com/bntranduc/clair_obscur"
 date: 2026-05-05
 ---
 
-**Context:** Hackathon  Commissariat du Numérique de Défense (French Defense Digital Agency)
+**Context:** Hackathon — Commissariat du Numérique de Défense (French Defense Digital Agency)
 
 **Result:** 🥈 2nd place overall · 🥇 1st place for attack detection quality (accuracy and relevance of generated alerts)
 

@@ -17,13 +17,13 @@ Clair Obscur est une plateforme de NDR (Network Detection and Response), de type
 
 ## Le problème adressé
 
-Les analystes SOC font face à un volume massif de lgos et d'alertes, souvent peu contextualisées, ce qui ralenti la detection des menaces réelles et la reconstitution des chaines d'attaque (kill chains). L'objtectif de Clair Obscur est de réduire cette charge cognitive en automatisant l'analyse et en fournissant des synthèses expoloitables directement par les analystes.
+Les analystes SOC font face à un volume massif de logs et d'alertes, souvent peu contextualisées, ce qui ralentit la détection des menaces réelles et la reconstitution des chaînes d'attaque (kill chains). L'objectif de Clair Obscur est de réduire cette charge cognitive en automatisant l'analyse et en fournissant des synthèses exploitables directement par les analystes.
 
 ## Ce que nous avons contruit
 
 ### Plateforme NDR en temps réel
 
-Conception d'une application type SIEM pour la visualisation de logs firewall, d'alertes, d'analytics et de KPI de sécutité, avec un frontend React et un backend FastAPI.
+Conception d'une application type SIEM pour la visualisation de logs firewall, d'alertes, d'analytics et de KPI de sécurité, avec un frontend React et un backend FastAPI.
 
 ### Pipeline cloud et ingestion 
 

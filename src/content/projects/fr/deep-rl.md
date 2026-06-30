@@ -8,7 +8,7 @@ date: 2026-05-01
 
 **Contexte :** Projet réalisé sur quelques mois dans le cadre d'un cours de Deep Reinforcement Learning à l'ESGI
 
-## Overview
+## Vue d'ensemble
 Deep Reinforcement Learning Library est une bibliothèque et un ensemble de binaires d'expérimentation écrits en Rust, conçus pour implémenter et comparer plusieurs algorithmes de RL et de Deep RL sur des environnements jouets, dont un jeu original baptisé Pond (grille 4x4).
 
 ## Le problème adressé

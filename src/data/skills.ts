@@ -6,18 +6,18 @@ export interface SkillCategory {
 export const skillCategories: SkillCategory[] = [
   {
     key: 'languages',
-    skills: ['Python', 'TypeScript', 'Bash', 'SQL', 'Go'],
+    skills: ['Python', 'Rust', 'TypeScript', 'SQL', 'Bash'],
   },
   {
     key: 'ml',
-    skills: ['PyTorch', 'Scikit-learn', 'HuggingFace', 'LangChain', 'MLflow'],
+    skills: ['Scikit-learn', 'LightGBM', 'XGBoost', 'Optuna', 'MLflow', 'PyTorch', 'LLMs'],
   },
   {
     key: 'mlops',
-    skills: ['Docker', 'Kubernetes', 'Airflow', 'Prefect', 'Terraform', 'Nginx', 'Traefik'],
+    skills: ['Docker', 'Kubernetes', 'Airflow', 'Terraform', 'FastAPI', 'Streamlit', 'React'],
   },
   {
     key: 'cloud',
-    skills: ['AWS', 'GCP', 'PostgreSQL', 'Redis', 'Kafka', 'dbt'],
+    skills: ['AWS', 'PostgreSQL', 'ClickHouse'],
   },
 ];
