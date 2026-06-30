@@ -1,14 +1,14 @@
 ---
 import { getCollection } from 'astro:content';
-import Layout from '../../components/Layout.astro';
-import { translations } from '../../i18n/translations';
+import Layout from '../../../components/Layout.astro';
+import { translations } from '../../../i18n/translations';
 
-const t = translations.fr;
+const t = translations.en;
 
 export async function getStaticPaths() {
-	const projects = await getCollection('projects', ({ id }) => id.startsWith('fr/'));
+	const projects = await getCollection('projects', ({ id }) => id.startsWith('en/'));
 	return projects.map((project) => {
-		const slug = project.id.replace(/^fr\//, '').replace(/\.md$/, '');
+		const slug = project.id.replace(/^en\//, '').replace(/\.md$/, '');
 		return {
 			params: { slug },
 			props: { project },
@@ -19,17 +19,17 @@ export async function getStaticPaths() {
 const { project } = Astro.props;
 const { Content } = await project.render();
 const { title, description, stack, repo, demo } = project.data;
-const slug = project.id.replace(/^fr\//, '').replace(/\.md$/, '');
+const slug = project.id.replace(/^en\//, '').replace(/\.md$/, '');
 ---
 
 <Layout
 	title={`${title} — Théo ELOY`}
 	description={description}
-	locale="fr"
+	locale="en"
 	canonicalPath={`/projects/${slug}`}
 >
 	<div class="max-w-4xl mx-auto px-6 py-16">
-		<a href="/#projects" class="text-slate-400 hover:text-slate-200 text-sm font-mono transition">
+		<a href="/en/#projects" class="text-slate-400 hover:text-slate-200 text-sm font-mono transition">
 			{t.backToProjects}
 		</a>
 

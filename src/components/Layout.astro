@@ -1,27 +1,48 @@
 ---
+import type { Locale } from '../i18n/translations';
+import { translations } from '../i18n/translations';
+import '../styles/global.css';
+
 interface Props {
 	title: string;
 	description?: string;
+	locale: Locale;
+	canonicalPath: string;
 }
 
-const { title, description } = Astro.props;
-import '../styles/global.css';
+const { title, description, locale, canonicalPath } = Astro.props;
+const t = translations[locale];
+
+const frHref = canonicalPath;
+const enHref = '/en' + canonicalPath;
+const altHref = locale === 'fr' ? enHref : frHref;
+const homeHref = locale === 'fr' ? '/' : '/en/';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={locale}>
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		{description && <meta name="description" content={description} />}
+		<link rel="alternate" hreflang="fr" href={frHref} />
+		<link rel="alternate" hreflang="en" href={enHref} />
+		<link rel="alternate" hreflang="x-default" href={frHref} />
 	</head>
 	<body class="bg-slate-950 text-slate-100">
 		<header class="border-b border-slate-800">
-			<nav class="max-w-4xl mx-auto px-6 py-6">
-				<a href="/" class="text-xl font-mono font-bold hover:text-slate-300 transition">
+			<nav class="max-w-4xl mx-auto px-6 py-6 flex items-center justify-between">
+				<a href={homeHref} class="text-xl font-mono font-bold hover:text-slate-300 transition">
 					Théo ELOY
+				</a>
+				<a
+					href={altHref}
+					aria-label={t.switchLangLabel}
+					class="text-sm font-mono text-slate-400 hover:text-amber-400 transition border border-slate-700 hover:border-amber-500/50 px-3 py-1 rounded"
+				>
+					{t.switchLang}
 				</a>
 			</nav>
 		</header>
@@ -32,7 +53,7 @@ import '../styles/global.css';
 
 		<footer class="border-t border-slate-800 mt-16">
 			<div class="max-w-4xl mx-auto px-6 py-8 text-center text-slate-400 text-sm font-mono">
-				<p>&copy; {new Date().getFullYear()} Théo ELOY. All rights reserved.</p>
+				<p>&copy; {new Date().getFullYear()} Théo ELOY. {t.footer}</p>
 			</div>
 		</footer>
 	</body>

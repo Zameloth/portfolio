@@ -1,23 +1,23 @@
 export interface SkillCategory {
-  name: string;
+  key: 'languages' | 'ml' | 'mlops' | 'cloud';
   skills: string[];
 }
 
 export const skillCategories: SkillCategory[] = [
   {
-    name: "Languages",
-    skills: ["Python", "TypeScript", "Bash", "SQL", "Go"],
+    key: 'languages',
+    skills: ['Python', 'TypeScript', 'Bash', 'SQL', 'Go'],
   },
   {
-    name: "ML / DL",
-    skills: ["PyTorch", "Scikit-learn", "HuggingFace", "LangChain", "MLflow"],
+    key: 'ml',
+    skills: ['PyTorch', 'Scikit-learn', 'HuggingFace', 'LangChain', 'MLflow'],
   },
   {
-    name: "MLOps & Infra",
-    skills: ["Docker", "Kubernetes", "Airflow", "Prefect", "Terraform", "Nginx", "Traefik"],
+    key: 'mlops',
+    skills: ['Docker', 'Kubernetes', 'Airflow', 'Prefect', 'Terraform', 'Nginx', 'Traefik'],
   },
   {
-    name: "Cloud & Data",
-    skills: ["AWS", "GCP", "PostgreSQL", "Redis", "Kafka", "dbt"],
+    key: 'cloud',
+    skills: ['AWS', 'GCP', 'PostgreSQL', 'Redis', 'Kafka', 'dbt'],
   },
 ];

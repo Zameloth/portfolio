@@ -1,20 +1,21 @@
 ---
 interface Props {
-	slug: string;
+	href: string;
 	title: string;
 	description: string;
 	stack: string[];
 	repo?: string;
 	demo?: string;
+	readMoreLabel: string;
 }
 
-const { slug, title, description, stack, repo, demo } = Astro.props;
+const { href, title, description, stack, repo, demo, readMoreLabel } = Astro.props;
 ---
 
 <article class="border border-slate-700/60 rounded-lg p-6 flex flex-col gap-4 hover:border-amber-500/30 transition-colors duration-300 bg-slate-900/40 h-full">
 	<div class="flex flex-col gap-2">
 		<h3 class="text-lg font-semibold font-mono">
-			<a href={`/projects/${slug}`} class="hover:text-amber-400 transition-colors">
+			<a href={href} class="hover:text-amber-400 transition-colors">
 				{title}
 			</a>
 		</h3>
@@ -30,8 +31,8 @@ const { slug, title, description, stack, repo, demo } = Astro.props;
 	</div>
 
 	<div class="flex items-center gap-4 text-sm font-mono">
-		<a href={`/projects/${slug}`} class="text-amber-400 hover:text-amber-300 transition-colors">
-			Read more →
+		<a href={href} class="text-amber-400 hover:text-amber-300 transition-colors">
+			{readMoreLabel}
 		</a>
 		{repo && (
 			<a href={repo} target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-300 transition-colors">

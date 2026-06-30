@@ -1,18 +1,18 @@
 ---
 import { getCollection } from 'astro:content';
-import Layout from '../components/Layout.astro';
-import Hero from '../components/Hero.astro';
-import ProjectCard from '../components/ProjectCard.astro';
-import { skillCategories } from '../data/skills';
-import { translations } from '../i18n/translations';
+import Layout from '../../components/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { skillCategories } from '../../data/skills';
+import { translations } from '../../i18n/translations';
 
-const t = translations.fr;
+const t = translations.en;
 
-const projects = (await getCollection('projects', ({ id }) => id.startsWith('fr/')))
+const projects = (await getCollection('projects', ({ id }) => id.startsWith('en/')))
 	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
-<Layout title={t.siteTitle} description={t.siteDescription} locale="fr" canonicalPath="/">
+<Layout title={t.siteTitle} description={t.siteDescription} locale="en" canonicalPath="/">
 	<Hero
 		name="Théo ELOY"
 		headline={t.heroHeadline}
@@ -25,11 +25,11 @@ const projects = (await getCollection('projects', ({ id }) => id.startsWith('fr/
 		</h2>
 		<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 			{projects.map((project, i) => {
-				const slug = project.id.replace(/^fr\//, '').replace(/\.md$/, '');
+				const slug = project.id.replace(/^en\//, '').replace(/\.md$/, '');
 				return (
 					<div data-reveal style={`transition-delay: ${i * 80}ms`}>
 						<ProjectCard
-							href={`/projects/${slug}`}
+							href={`/en/projects/${slug}`}
 							title={project.data.title}
 							description={project.data.description}
 							stack={project.data.stack}
