@@ -34,11 +34,11 @@ Designed an agentic assistant capable of answering analysts' questions, generati
 
 ## Tech stack
 
-**Frontend:** React
-**Backend:** FastAPI
-**Cloud:** AWS (OpenSearch, S3, SQS, Lambda, SageMaker, EC2, CloudWatch)
-**On-premise:** ClickHouse, PostgreSQL
-**AI:** LLM (analyst agent), Claude API
+- **Frontend:** React
+- **Backend:** FastAPI
+- **Cloud:** AWS (OpenSearch, S3, SQS, Lambda, SageMaker, EC2, CloudWatch)
+- **On-premise:** ClickHouse, PostgreSQL
+- **AI:** LLM (analyst agent), Claude API
 
 ## Skills involved
 

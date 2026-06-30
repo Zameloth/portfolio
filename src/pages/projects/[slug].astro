@@ -28,18 +28,19 @@ const slug = project.id.replace(/^fr\//, '').replace(/\.md$/, '');
 	locale="fr"
 	canonicalPath={`/projects/${slug}`}
 >
-	<div class="max-w-4xl mx-auto px-6 py-16">
-		<a href="/#projects" class="text-slate-400 hover:text-slate-200 text-sm font-mono transition">
+	<div class="max-w-3xl mx-auto px-6 py-16">
+		<a href="/#projects" class="inline-flex items-center gap-2 text-slate-400 hover:text-amber-400 text-sm font-mono transition group">
+			<span class="inline-block group-hover:-translate-x-1 transition-transform">←</span>
 			{t.backToProjects}
 		</a>
 
-		<header class="mt-8 mb-10 flex flex-col gap-4">
+		<header class="mt-10 mb-10 flex flex-col gap-4">
 			<h1 class="text-3xl font-bold font-mono">{title}</h1>
-			<p class="text-slate-400 text-lg leading-relaxed">{description}</p>
+			<p class="text-slate-400 text-lg leading-relaxed font-sans">{description}</p>
 
 			<div class="flex flex-wrap gap-2">
 				{stack.map((tag) => (
-					<span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
+					<span class="text-xs font-mono px-2 py-0.5 rounded bg-sky-950/40 text-sky-300 border border-sky-700/40">
 						{tag}
 					</span>
 				))}
@@ -49,13 +50,13 @@ const slug = project.id.replace(/^fr\//, '').replace(/\.md$/, '');
 				<div class="flex gap-4 font-mono text-sm pt-1">
 					{repo && (
 						<a href={repo} target="_blank" rel="noopener noreferrer"
-							class="text-slate-300 hover:text-white border border-slate-700 px-4 py-1.5 rounded hover:border-slate-500 transition">
+							class="text-slate-300 hover:text-amber-400 border border-slate-700 hover:border-amber-500/50 px-4 py-1.5 rounded transition">
 							GitHub →
 						</a>
 					)}
 					{demo && (
 						<a href={demo} target="_blank" rel="noopener noreferrer"
-							class="text-slate-300 hover:text-white border border-slate-700 px-4 py-1.5 rounded hover:border-slate-500 transition">
+							class="text-slate-300 hover:text-amber-400 border border-slate-700 hover:border-amber-500/50 px-4 py-1.5 rounded transition">
 							Live demo →
 						</a>
 					)}
@@ -63,13 +64,17 @@ const slug = project.id.replace(/^fr\//, '').replace(/\.md$/, '');
 			)}
 		</header>
 
+		<hr class="border-slate-800 mb-12" />
+
 		<div class="prose prose-invert prose-slate max-w-none
 			prose-headings:font-mono prose-headings:text-slate-100
-			prose-p:text-slate-300 prose-p:leading-relaxed
-			prose-li:text-slate-300
-			prose-strong:text-slate-100
-			prose-a:text-slate-300 prose-a:no-underline hover:prose-a:text-white
-			prose-code:text-slate-300 prose-code:bg-slate-800 prose-code:px-1 prose-code:rounded prose-code:text-sm
+			prose-h2:text-lg prose-h2:mt-12 prose-h2:mb-4 prose-h2:border-l-2 prose-h2:border-amber-500 prose-h2:pl-3
+			prose-h3:text-base prose-h3:mt-6 prose-h3:mb-2 prose-h3:text-slate-200
+			prose-p:text-slate-300 prose-p:leading-relaxed prose-p:font-sans
+			prose-li:text-slate-300 prose-li:font-sans
+			prose-strong:text-amber-300 prose-strong:font-semibold
+			prose-a:text-sky-400 prose-a:no-underline hover:prose-a:text-sky-200
+			prose-code:text-sky-300 prose-code:bg-slate-800/80 prose-code:px-1 prose-code:rounded prose-code:text-sm prose-code:font-mono
 			prose-hr:border-slate-800">
 			<Content />
 		</div>

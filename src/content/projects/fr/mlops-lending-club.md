@@ -35,14 +35,15 @@ Conception d'une application Streamlit permettant de visualiser les prédictions
 Architecture entièrement conteneurisée avec Docker Compose (profils data/train/airflow), packaging via uv, et automatisation du déploiement via Makefile.
 
 ## Stack technique
-**ML :** scikit-learn, LightGBM, XGBoost, Optuna
-**Tracking :** MLflow
-**API :** FastAPI, Uvicorn
-**Frontend :** Streamlit, Plotly
-**Orchestration :** Apache Airflow (LocalExecutor + PostgreSQL)
-**Packaging :** uv
-**Conteneurisation :** Docker Compose
-**Qualité :** ruff, mypy, pytest
+
+- **ML :** scikit-learn, LightGBM, XGBoost, Optuna
+- **Tracking :** MLflow
+- **API :** FastAPI, Uvicorn
+- **Frontend :** Streamlit, Plotly
+- **Orchestration :** Apache Airflow (LocalExecutor + PostgreSQL)
+- **Packaging :** uv
+- **Conteneurisation :** Docker Compose
+- **Qualité :** ruff, mypy, pytest
 
 ## Compétences mobilisées
 Machine learning et modélisation prédictive, feature engineering, MLOps et tracking d'expérimentations, orchestration de pipelines de données, conception et exposition d'API, conteneurisation et déploiement, qualité logicielle (lint, typage, tests).

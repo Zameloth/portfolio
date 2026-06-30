@@ -37,12 +37,12 @@ Développement d'un moteur basé sur un LLM avec pré-traitement par regex pour 
 Conception d'un assistant agentique capable de répondre aux questions des analystes, de générer des synthèses d'incidents et de produire des analyses ciblées sur des alertes spécifiques.
  
 ## Stack technique
- 
-**Frontend :** React
-**Backend :** FastAPI
-**Cloud :** AWS (OpenSearch, S3, SQS, Lambda, SageMaker, EC2, CloudWatch)
-**On-premise :** ClickHouse, PostgreSQL
-**IA :** LLM (agent analyste), API Claude
+
+- **Frontend :** React
+- **Backend :** FastAPI
+- **Cloud :** AWS (OpenSearch, S3, SQS, Lambda, SageMaker, EC2, CloudWatch)
+- **On-premise :** ClickHouse, PostgreSQL
+- **IA :** LLM (agent analyste), API Claude
 
 ## Compétences mobilisées
  

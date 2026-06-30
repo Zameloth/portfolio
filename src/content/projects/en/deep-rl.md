@@ -32,10 +32,11 @@ Developed a GUI with Macroquad to play Pond in human-vs-agent or human-vs-random
 Python scripts for plotting learning curves (reward vs episodes and vs cumulative time), and a complete LaTeX scientific report synthesizing comparative results.
 
 ## Tech stack
-**Main language:** Rust
-**GUI:** Macroquad
-**Data analysis:** Python, Jupyter Notebook
-**Report:** LaTeX
+
+- **Main language:** Rust
+- **GUI:** Macroquad
+- **Data analysis:** Python, Jupyter Notebook
+- **Report:** LaTeX
 
 ## Skills involved
 Implementation of reinforcement learning and deep reinforcement learning algorithms, systems programming in Rust, simulation environment design, interactive GUI development, experimental results analysis and visualization, scientific report writing.

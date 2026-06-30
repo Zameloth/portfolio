@@ -32,10 +32,11 @@ Développement d'une GUI avec Macroquad permettant de jouer à Pond en mode huma
 Scripts Python pour le tracé des courbes d'apprentissage (récompense en fonction des épisodes et du temps cumulé), et rédaction d'un rapport scientifique complet en LaTeX synthétisant les résultats comparatifs.
 
 ## Stack technique
-**Langage principal :** Rust
-**Interface graphique :** Macroquad
-**Analyse de données :** Python, Jupyter Notebook
-**Rapport :** LaTeX
+
+- **Langage principal :** Rust
+- **Interface graphique :** Macroquad
+- **Analyse de données :** Python, Jupyter Notebook
+- **Rapport :** LaTeX
 
 ## Compétences mobilisées
 Implémentation d'algorithmes de reinforcement learning et de deep reinforcement learning, programmation système en Rust, conception d'environnements de simulation, développement d'interfaces graphiques interactives, analyse et visualisation de résultats expérimentaux, rédaction scientifique.
