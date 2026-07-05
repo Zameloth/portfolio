@@ -4,6 +4,8 @@ description: "AI-augmented NDR platform for cybersecurity anomaly detection and 
 stack: ["Python", "LLMs", "FastAPI", "AWS", "React", "ClickHouse", "PostgreSQL"]
 repo: "https://github.com/bntranduc/clair_obscur"
 date: 2026-05-05
+cover: "../images/clair-obscur/cover.png"
+coverAlt: "Temporary cover visual — Clair Obscur"
 ---
 
 **Context:** Hackathon — Commissariat du Numérique de Défense (French Defense Digital Agency)
@@ -25,6 +27,8 @@ Designed a SIEM-style application for visualizing firewall logs, alerts, analyti
 
 ### Cloud pipeline & ingestion
 Set up an AWS architecture (OpenSearch, S3, SQS, Lambda, SageMaker, EC2, CloudWatch) ensuring continuous ingestion, storage, orchestration, and observability of data. The architecture was also adapted for an on-premise deployment using ClickHouse and PostgreSQL.
+
+![Temporary architecture diagram — Clair Obscur](../images/clair-obscur/diagram.png)
 
 ### AI-driven attack analysis engine
 Developed an LLM-based engine with regex pre-processing to extract, normalize, and structure key incident information. The LLM, configured with a senior analyst role, leverages statistics computed on log batches (based on the MITRE ATT&CK and MITRE D3FEND frameworks) to reconstruct attack kill chains.

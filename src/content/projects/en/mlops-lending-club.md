@@ -5,6 +5,8 @@ stack: ["Python", "Scikit-learn", "LightGBM", "XGBoost", "Optuna", "MLflow", "Fa
 repo: "https://github.com/Zameloth/orchestration_ml"
 demo: "https://lending-club.theo-eloy.fr/"
 date: 2026-06-18
+cover: "../images/mlops-lending-club/cover.png"
+coverAlt: "Temporary cover visual — MLOps — Lending Club"
 ---
 
 **Context:** Built in 1 week as part of the MLOps course at ESGI

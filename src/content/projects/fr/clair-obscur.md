@@ -4,6 +4,8 @@ description: "Plateforme NDR de détection et résolution d'anomalies cybersécu
 stack: ["Python", "LLMs", "FastAPI", "AWS", "React", "ClickHouse", "PostgreSQL"]
 repo: "https://github.com/bntranduc/clair_obscur"
 date: 2026-05-05
+cover: "../images/clair-obscur/cover.png"
+coverAlt: "Visuel de couverture temporaire — Clair Obscur"
 ---
 
 
@@ -28,6 +30,8 @@ Conception d'une application type SIEM pour la visualisation de logs firewall, d
 ### Pipeline cloud et ingestion 
 
 Mise en place d'une architecture AWS (OpenSearch, S3, SQS, Lambda, SageMaker, EC2, CloudWatch) assurant l'ingestion continue, le stockage, l'orchestration et l'observabilité des données. L'architecture a également été adaptée pour un déploiement on-premise avec ClickHouse et PostgreSQL.
+
+![Diagramme architecture temporaire — Clair Obscur](../images/clair-obscur/diagram.png)
 
 ### Moteur d'analyse IA des attaques
 

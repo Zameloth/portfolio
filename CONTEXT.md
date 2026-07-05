@@ -7,10 +7,19 @@ Served as a fully static site by Nginx behind Traefik at `theo-eloy.fr`.
 
 ### Project
 A piece of work showcased on the portfolio. Each Project has a title, a tech
-stack, external links (repo / demo), and a description. Each Project is authored
-as a single Markdown file (Content Collection entry) whose body becomes its own
-**dedicated detail page**. The home page renders Projects as cards linking to
-those detail pages.
+stack, external links (repo / demo), a description, and an optional **cover
+image**. Each Project is authored as a single Markdown file (Content
+Collection entry) whose body becomes its own **dedicated detail page**, and
+may include inline images (screenshots, diagrams). The home page renders
+Projects as cards linking to those detail pages. See ADR-0003 for how
+project images are stored and optimized.
+
+### Cover image
+The single image representing a Project, shown atop its card on the home
+page and below the header on its detail page. Optional — a Project without
+one renders with no image block (no placeholder). Paired with a required-if-
+present `coverAlt` text for accessibility, kept distinct from the Project's
+`description`.
 
 ### Skill
 A competency/technology displayed in the competences section (a tool, language,

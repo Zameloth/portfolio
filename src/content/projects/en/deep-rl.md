@@ -4,6 +4,8 @@ description: "Rust library for comparing reinforcement learning and deep reinfor
 stack: ["Rust", "Python", "Macroquad", "Jupyter"]
 repo: "https://github.com/Zameloth/deep_reinforcement_learning_lib"
 date: 2026-05-01
+cover: "../images/deep-rl/cover.png"
+coverAlt: "Temporary cover visual — Deep Reinforcement Learning Library"
 ---
 
 **Context:** Built over several months as part of a Deep Reinforcement Learning course at ESGI

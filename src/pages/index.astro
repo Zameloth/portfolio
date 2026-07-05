@@ -82,6 +82,8 @@ const projects = (await getCollection('projects', ({ id }) => id.startsWith('fr/
 							repo={project.data.repo}
 							demo={project.data.demo}
 							readMoreLabel={t.readMore}
+							cover={project.data.cover}
+							coverAlt={project.data.coverAlt}
 						/>
 					</div>
 				);

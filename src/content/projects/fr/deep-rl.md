@@ -4,6 +4,8 @@ description: "Bibliothèque Rust de comparaison d'algorithmes de RL et de Deep R
 stack: ["Rust", "Python", "Macroquad", "Jupyter"]
 repo: "https://github.com/Zameloth/deep_reinforcement_learning_lib"
 date: 2026-05-01
+cover: "../images/deep-rl/cover.png"
+coverAlt: "Visuel de couverture temporaire — Deep Reinforcement Learning Library"
 ---
 
 **Contexte :** Projet réalisé sur quelques mois dans le cadre d'un cours de Deep Reinforcement Learning à l'ESGI
