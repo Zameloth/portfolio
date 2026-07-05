@@ -6,7 +6,7 @@ repo: "https://github.com/Zameloth/orchestration_ml"
 demo: "https://lending-club.theo-eloy.fr/"
 date: 2026-06-18
 cover: "../images/mlops-lending-club/cover.png"
-coverAlt: "Visuel de couverture temporaire — MLOps — Lending Club"
+coverAlt: "Capture d'écran du frontend Streamlit de visualisation des prédictions"
 ---
 
 **Contexte :** Projet fil rouge ESGI
@@ -36,6 +36,8 @@ Conception d'une application Streamlit permettant de visualiser les prédictions
 
 ### Conteneurisation et déploiement
 Architecture entièrement conteneurisée avec Docker Compose (profils data/train/airflow), packaging via uv, et automatisation du déploiement via Makefile.
+
+![Diagramme architecture du pipeline MLOps Lending Club](../images/mlops-lending-club/diagram.svg)
 
 ## Stack technique
 
