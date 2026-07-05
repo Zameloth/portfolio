@@ -5,7 +5,7 @@ stack: ["Python", "LLMs", "FastAPI", "AWS", "React", "ClickHouse", "PostgreSQL"]
 repo: "https://github.com/bntranduc/clair_obscur"
 date: 2026-05-05
 cover: "../images/clair-obscur/cover.png"
-coverAlt: "Visuel de couverture temporaire — Clair Obscur"
+coverAlt: "Slide de titre Clair Obscur : plateforme NDR augmentée par IA"
 ---
 
 
@@ -16,6 +16,8 @@ coverAlt: "Visuel de couverture temporaire — Clair Obscur"
 ## Vue d'ensemble
 
 Clair Obscur est une plateforme de NDR (Network Detection and Response), de type SIEM, conçue pour assister les analystes SOC grâce à un moteur d'analyses basé sur des LLM, capable de détecter, contextualiser et expliquer des attaques cyber à partir de logs bruts. 
+
+![Schéma fonctionnel du pipeline, de la collecte des logs à la restitution des résultats à l analyste](../images/clair-obscur/schema_fonctionnel.png)
 
 ## Le problème adressé
 
@@ -31,7 +33,7 @@ Conception d'une application type SIEM pour la visualisation de logs firewall, d
 
 Mise en place d'une architecture AWS (OpenSearch, S3, SQS, Lambda, SageMaker, EC2, CloudWatch) assurant l'ingestion continue, le stockage, l'orchestration et l'observabilité des données. L'architecture a également été adaptée pour un déploiement on-premise avec ClickHouse et PostgreSQL.
 
-![Diagramme architecture temporaire — Clair Obscur](../images/clair-obscur/diagram.png)
+![Schéma d architecture AWS : ingestion Lambda/SQS, stockage S3, modèles SageMaker et Claude, backend FastAPI et frontend](../images/clair-obscur/schema_aws.png)
 
 ### Moteur d'analyse IA des attaques
 

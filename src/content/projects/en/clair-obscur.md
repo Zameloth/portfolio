@@ -5,7 +5,7 @@ stack: ["Python", "LLMs", "FastAPI", "AWS", "React", "ClickHouse", "PostgreSQL"]
 repo: "https://github.com/bntranduc/clair_obscur"
 date: 2026-05-05
 cover: "../images/clair-obscur/cover.png"
-coverAlt: "Temporary cover visual — Clair Obscur"
+coverAlt: "Clair Obscur title slide: AI-augmented NDR platform"
 ---
 
 **Context:** Hackathon — Commissariat du Numérique de Défense (French Defense Digital Agency)
@@ -15,6 +15,8 @@ coverAlt: "Temporary cover visual — Clair Obscur"
 ## Overview
 
 Clair Obscur is a SIEM-style NDR (Network Detection and Response) platform designed to assist SOC analysts through an LLM-based analysis engine capable of detecting, contextualizing, and explaining cyberattacks from raw logs.
+
+![Functional diagram of the pipeline, from log collection to result delivery to the analyst](../images/clair-obscur/schema_fonctionnel.png)
 
 ## The problem we addressed
 
@@ -28,7 +30,7 @@ Designed a SIEM-style application for visualizing firewall logs, alerts, analyti
 ### Cloud pipeline & ingestion
 Set up an AWS architecture (OpenSearch, S3, SQS, Lambda, SageMaker, EC2, CloudWatch) ensuring continuous ingestion, storage, orchestration, and observability of data. The architecture was also adapted for an on-premise deployment using ClickHouse and PostgreSQL.
 
-![Temporary architecture diagram — Clair Obscur](../images/clair-obscur/diagram.png)
+![AWS architecture diagram: Lambda/SQS ingestion, S3 storage, SageMaker and Claude models, FastAPI backend and frontend](../images/clair-obscur/schema_aws.png)
 
 ### AI-driven attack analysis engine
 Developed an LLM-based engine with regex pre-processing to extract, normalize, and structure key incident information. The LLM, configured with a senior analyst role, leverages statistics computed on log batches (based on the MITRE ATT&CK and MITRE D3FEND frameworks) to reconstruct attack kill chains.
