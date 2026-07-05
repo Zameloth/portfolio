@@ -20,10 +20,16 @@ nécessite son jugement, pas automatisable.
 
 ## Acceptance criteria
 
-- [ ] Les 3 projets ont un cover réel (non généré par script) dans `images/<slug>/`
-- [ ] `coverAlt` est mis à jour avec une description visuelle précise par projet
-- [ ] Rendu vérifié sur home (carte) et page détail, fr et en
-- [ ] `npm run build` réussit sans erreur
+- [ ] Les 3 projets ont un cover réel (non généré par script) dans `images/<slug>/` — clair-obscur ✅, mlops-lending-club ✅, deep-rl en attente d'asset
+- [x] `coverAlt` est mis à jour avec une description visuelle précise par projet fait
+- [x] Rendu vérifié sur home (carte) et page détail, fr et en, pour les projets faits
+- [x] `npm run build` réussit sans erreur
+
+## Comments
+
+- 2026-07-05 : clair-obscur et mlops-lending-club ont reçu leurs vrais covers.
+  deep-rl reste sur son placeholder — Théo n'a pas encore de visuel pour ce
+  projet. Triage laissé en `ready-for-human` jusqu'à ce que l'asset arrive.
 
 ## Blocked by
 

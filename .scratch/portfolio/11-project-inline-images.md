@@ -21,10 +21,18 @@ texte — décision de contenu, pas automatisable.
 
 ## Acceptance criteria
 
-- [ ] Au moins une image inline par projet existant, placée dans une section pertinente du texte
-- [ ] Chaque image inline a un texte alternatif descriptif
-- [ ] Les images s'affichent correctement optimisées (build Astro) sur les pages détail fr et en
-- [ ] `npm run build` réussit sans erreur
+- [ ] Au moins une image inline par projet existant, placée dans une section pertinente du texte — clair-obscur ✅ (schéma fonctionnel + schéma AWS), mlops-lending-club ✅ (diagramme d'architecture), deep-rl en attente d'asset
+- [x] Chaque image inline a un texte alternatif descriptif, pour les projets faits
+- [x] Les images s'affichent correctement optimisées (build Astro) sur les pages détail fr et en, pour les projets faits
+- [x] `npm run build` réussit sans erreur
+
+## Comments
+
+- 2026-07-05 : clair-obscur a reçu un schéma fonctionnel (après l'overview)
+  et le schéma d'architecture AWS (dans la section pipeline cloud, à la
+  place de l'image placeholder de la Slice 9). mlops-lending-club a reçu son
+  diagramme d'architecture (après la section conteneurisation). deep-rl
+  reste sans image inline — Théo n'a pas encore de visuel pour ce projet.
 
 ## Blocked by
 
