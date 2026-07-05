@@ -3,6 +3,7 @@ title: "MLOps — Lending Club"
 description: "Pipeline MLOps complet de prédiction de défaut de paiement sur des prêts entre particuliers"
 stack: ["Python", "Scikit-learn", "LightGBM", "XGBoost", "Optuna", "MLflow", "FastAPI", "Airflow", "Docker", "Streamlit"]
 repo: "https://github.com/Zameloth/orchestration_ml"
+demo: "https://lending-club.theo-eloy.fr/"
 date: 2026-06-18
 ---
 
