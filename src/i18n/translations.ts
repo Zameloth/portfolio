@@ -45,7 +45,7 @@ export const translations: Record<Locale, Translations> = {
 		heroHeadline: 'Ingénieur IA',
 		heroDescription:
 			"Je conçois et déploie des solutions d'IA de bout en bout, de l'infrastructure cloud jusqu'aux agents LLM en production.",
-		heroAvailability: '● Disponible · septembre 2026',
+		heroAvailability: '● Disponible immédiatement',
 		sectionAbout: 'À propos',
 		aboutIntro:
 			"Ingénieur IA en fin de Mastère IA & Big Data à l'ESGI (alternance), avec 3 ans d'expérience chez La Poste en data science et engineering. Orienté systèmes agentiques et intégration de LLMs en production — benchmark LLM/SLM sur Databricks, pipelines de détection basés sur MITRE ATT&CK avec un LLM analyste SOC. 2ème place au Hackathon IA du Ministère des Armées (1er taux de détection).",
@@ -111,7 +111,7 @@ export const translations: Record<Locale, Translations> = {
 		heroHeadline: 'AI Engineer',
 		heroDescription:
 			'I design and deploy end-to-end AI solutions, from cloud infrastructure to LLM agents in production.',
-		heroAvailability: '● Available · September 2026',
+		heroAvailability: '● Available immediately',
 		sectionAbout: 'About',
 		aboutIntro:
 			"AI Engineer finishing a Master's in AI & Big Data at ESGI (work-study), with 3 years of experience at La Poste in data science and engineering. Focused on agentic systems and LLM integration in production — LLM/SLM benchmarking on Databricks, MITRE ATT&CK-based detection pipelines with an LLM SOC analyst. 2nd place at the Ministry of Armed Forces AI Hackathon (1st detection rate).",
