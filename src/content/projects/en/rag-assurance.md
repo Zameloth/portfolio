@@ -3,6 +3,7 @@ title: "RAG Assurance"
 description: "French-language RAG assistant over public insurance law that explains and cites the applicable legal article"
 stack: ["Python", "LangChain", "BGE-M3", "Qdrant", "Mistral", "OpenRouter", "Langfuse", "FastAPI", "HTMX", "Docker"]
 repo: "https://github.com/Zameloth/rag_assurances"
+demo: "https://rag.theo-eloy.fr/"
 date: 2026-10-13
 ---
 

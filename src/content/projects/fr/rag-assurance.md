@@ -3,6 +3,7 @@ title: "RAG Assurance"
 description: "Assistant RAG en français sur le droit public des assurances, qui explique et cite l'article de loi applicable"
 stack: ["Python", "LangChain", "BGE-M3", "Qdrant", "Mistral", "OpenRouter", "Langfuse", "FastAPI", "HTMX", "Docker"]
 repo: "https://github.com/Zameloth/rag_assurances"
+demo: "https://rag.theo-eloy.fr/"
 date: 2026-10-13
 ---
 
